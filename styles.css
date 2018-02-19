@@ -1,0 +1,261 @@
+body {
+	font-family: Calibri, Geneva, Verdana, sans-serif;
+	vertical-align: middle;
+	min-height: 100px;
+	min-width: 200px;
+	background-color: #ECEFF1 !important;
+}
+.container-fluid {
+    width: 100%;
+	left: 0;
+	right: 0;
+	position: fixed;
+}
+.container-with-bgimg {
+	padding: 3%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	opacity: 0.9;
+	position:inherit;
+	min-width: 100%;
+}
+.content-container {
+	text-align:center
+}
+.css3 {
+	float: inherit;
+  }
+.bg1 {
+	background-image: url('img/1.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg1.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg1.jpg', sizingMethod='scale')";
+	}
+.bg2 {
+	background-image: url('img/2.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg2.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg2.jpg', sizingMethod='scale')";
+	}
+.bg3 {
+	background-image: url('img/3.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg3.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg3.jpg', sizingMethod='scale')";
+	}
+.bg4 {
+	background-image: url('img/4.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg4.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg4.jpg', sizingMethod='scale')";
+	}
+.bg5 {
+	background-image: url('img/5.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg5.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg5.jpg', sizingMethod='scale')";
+	}
+.bg6 {
+	background-image: url('img/6.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg6.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg6.jpg', sizingMethod='scale')";
+	}
+.bg7 {
+	background-image: url('img/7.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg7.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg7.jpg', sizingMethod='scale')";
+	}
+.bg8 {
+	background-image: url('img/8.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg8.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg8.jpg', sizingMethod='scale')";
+	}
+.bg9 {
+	background-image: url('img/9.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg9.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg9.jpg', sizingMethod='scale')";
+	}
+.bg10 {
+	background-image: url('img/10.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg10.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg10.jpg', sizingMethod='scale')";
+	}
+.bg11 {
+	background-image: url('img/11.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg11.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg11.jpg', sizingMethod='scale')";
+	}
+.bg12 {
+	background-image: url('img/12.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg12.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg12.jpg', sizingMethod='scale')";
+	}
+.bg13 {
+	background-image: url('img/13.jpeg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg13.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg13.jpg', sizingMethod='scale')";
+	}
+.bg14 {
+	background-image: url('img/14.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg14.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg14.jpg', sizingMethod='scale')";
+	}	
+.bg15 {
+	background-image: url('img/15.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg15.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg15.jpg', sizingMethod='scale')";
+	}
+.bg16 {
+	background-image: url('img/16.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg16.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg16.jpg', sizingMethod='scale')";
+	}
+.bg17 {
+	background-image: url('img/17.jpg');
+	filter:    progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg17.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg17.jpg', sizingMethod='scale')";
+	}
+
+
+#page-header {
+	font-size: 10em;
+	vertical-align: middle;
+	font-family:  Verdana, Geneva, Tahoma, sans-serif, cursive;
+	letter-spacing: 3px;
+	padding-left: 15px;
+	margin: 130px 0px 90px 0px;
+	text-align: center;
+	color:rgb(225, 225, 247);
+	text-shadow:1px 1px 2px rgb(102, 102, 102), 0 0 1em rgb(56, 56, 58), 0 0 0.2em#302e2e;
+}
+#content {
+	text-align: left;
+	color:rgb(225, 225, 247);
+    text-shadow: 1.5px 1.8px 2px  #302e2e;
+	display: inline-block;
+	padding-bottom: 30px;
+}
+#selectors {
+	font-size: 20px;
+	letter-spacing: 2.5px;
+	text-align: center;;
+	color:rgb(225, 225, 247);
+	text-shadow: 1.5px 1.8px 2px  #302e2e;
+	float: none;
+}
+#temperature {
+	color:  #302e2e;
+}
+
+h3 {
+	text-align: center;
+}
+.label {
+	width: 150px;
+	display: inline-block;
+	margin: 10px;
+}
+#observations {
+	font-family:  Verdana, Geneva, Tahoma, sans-serif, cursive;
+	color:rgb(225, 225, 247);
+	text-shadow: 1.5px 1.8px 2px  #302e2e;
+}
+#observations > div {
+	font-weight: bold;
+}
+#observations > div ~ div {
+	font-weight: normal;
+}
+#observations > div > div {
+	display: inline-block;
+	width: 200px;
+}
+input {
+	width: 200px;
+}
+#selectors > select {
+	width: 200px;
+	color: #302e2e;
+}
+.btn{
+	text-align: center !important;
+	font-size: 13px !important;
+	color: #181717 !important;
+	letter-spacing: 2.5px !important;
+	text-shadow: 1.5px 1.8px 2px rgb(236, 234, 234) !important;
+	margin: 25px 0px 30px 0px !important;
+	padding: 12px 22px !important;
+	background-color:Transparent !important;
+	border: 0.7px solid #FFF !important;
+	font-family:  Verdana !important;
+    background-repeat:no-repeat;
+    cursor:pointer !important;
+    overflow: hidden !important;
+    outline:none !important;
+}
+.btn:hover {
+	color:  rgb(51, 51, 51) !important;
+	background-color: #ECEFF1 !important;
+	font-size: 13.8px !important;
+	opacity: 0.7;
+
+}
+.clickme {
+	color:  #cecece;
+	letter-spacing: 2px;
+	font-size: 15px;
+	text-decoration: none;
+	text-shadow: 0.9px 1.5px 1.8px rgb(19, 18, 18);
+}
+.clickme:hover {
+	color:  #0f0f0f;
+	letter-spacing: 4.5px;
+	text-decoration: none;
+	text-shadow: 1px 1px 1.5px rgb(150, 150, 150);
+}
+.mailme{
+	color:  #424242;
+	letter-spacing: 2px;
+	font-size: 15px;
+	text-decoration: none;
+	display: inline;
+}
+.mailme:hover {
+	color:  #424242;
+	letter-spacing: 4px;
+	text-decoration: none;
+	display: inline;
+}
+.call {
+	color:  #424242;
+	letter-spacing: 2px;
+	font-size: 15px;
+	text-decoration: none;
+	display: inline;
+}
+.call:hover {
+	color:  #424242;
+	letter-spacing: 4px;
+	text-decoration: none;
+	display: inline;
+}
+footer {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	width: inherit;
+	background-color: #ECEFF1;
+	padding: 3%;
+	min-height: 100px;
+	min-width: 200px;
+	position:  auto;
+	color: rgb(26, 26, 26);
+}
+@keyframes blinkAnimation {
+	0%   {background-color:white; left:0px; top:0px;}
+	25%  {background-color:#424242; left:200px; top:0px;}
+	50%  {background-color:#ECEFF1; left:200px; top:200px;}
+	75%  {background-color:#424242; left:0px; top:200px;}
+	100% {background-color:white; left:0px; top:0px;}
+}
+.notice-me {
+	animation-name: blinkAnimation ;
+	animation-duration: 4s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;  
+}

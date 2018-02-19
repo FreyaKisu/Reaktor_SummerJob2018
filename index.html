@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Report your local weather</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="ontainer-fluid">
+		<div class="container-with-bgimg">
+			<div id="page-header">
+				<h1 class="container-text-center">Local weather observations</h1>
+			</div>
+			<div class="content-container">
+					<div id="observations"></div>
+						<div id="content">
+							<h3>Select city and add</h3>
+								<h3>  your observation:</h3>
+						</div>
+				<div id="selectors">
+					<div>Select city</div>
+						<select id="city"></select>
+							<div>Temperature (&#8451;):</div>
+								<input id="temperature" value="0" />
+					<div class="cl-sm-4">
+						<button type="button" class="btn bt-default" onclick="submitData()"> Submit
+							<span class="glyphicon glyphicon-thumbs-up"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			</br>
+			<div class="text-left">
+				<h4>
+					<a href="#hidden" data-toggle="collapse" class="clickme">CLICK ME</a>
+				</h4>
+				</br>
+
+			</div>
+		</div>
+		<div id="hidden" class="collapse">
+			<footer class="text-center">
+				<div class="row">
+					<div class="col-sm-4">
+						<h3>Contact me:</h3>
+						<br>
+						<a href="https://www.linkedin.com/in/the-mighty-dev-apprentice/">
+							<img src="img/linkedin.png">
+						</a>
+					</div>
+					<div class="col-sm-4">
+						<address>
+							<h4>
+								<a href="mailto:edit.orosz.office@gmail.com" class="mailme">Mail me</a>
+							</h4>
+							<h4>
+								<a href="tel://+358403629123" data-toggle="collapse" class="call">Call me</a>
+							</h4>
+						</address>
+					</div>
+					<div class="col-sm-4">
+						<p>Where does the bunny jump to?</p>
+						<a href="http://www.haaga-helia.fi/fi/etusivu">
+							<img src="img/bunny.png" class="icon notice-me" id="bunny">
+						</a>
+					</div>
+				</div>
+		</div>
+		</footer>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>
