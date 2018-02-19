@@ -1,4 +1,16 @@
 var mysql = require('mysql');
+/*
+For this to work you'll need to have mysql database running on localhost
+with default username and password and there must be database "weather" with
+the following table:
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| location    | varchar(50) | YES  |     | NULL    |       |
+| temperature | double      | YES  |     | NULL    |       |
+| time        | date        | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+*/
 module.exports = {
     getAllData: function(afterLoad) {
         // Query initial data from the database
