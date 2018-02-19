@@ -1,8 +1,7 @@
 var mysql = require('mysql');
 /*
-For this to work you'll need to have mysql database running on localhost
-with default username and password and there must be database "weather" with
-the following table:
+For this to work you'll need to have mysql database and
+there must be database "weather" with the following table:
 +-------------+-------------+------+-----+---------+-------+
 | Field       | Type        | Null | Key | Default | Extra |
 +-------------+-------------+------+-----+---------+-------+
@@ -14,7 +13,8 @@ the following table:
 module.exports = {
     getAllData: function(afterLoad) {
         // Query initial data from the database
-        con.query('select location, temperature, time from weather.observations;', function (err, result) {
+        con.query('select location, temperature, time from ta2tfzaazgdur2p4.observations;',
+        function (err, result) {
             if (err) throw err;
             afterLoad(result);
         });
@@ -26,13 +26,14 @@ module.exports = {
         });
     },
     saveObservation: function(observation) {
-        con.query('insert into weather.observations (location, temperature, time) values (?)',
+        con.query('insert into ta2tfzaazgdur2p4.observations (location, temperature, time) values (?)',
             [[observation.location, observation.temperature, observation.time]]);
     }
 };
 
 var con = mysql.createConnection({
-	host: "localhost",
-	user: "root"
+	host: "cvktne7b4wbj4ks1.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
+    user: "exopczqb76226s1s",
+    password: "o1dhv589w0c74d4l"
   });
   
