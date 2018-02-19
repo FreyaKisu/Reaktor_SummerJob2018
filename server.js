@@ -5,6 +5,9 @@ const weatherDb = require('./weather-db');
 let observations = [];
 weatherDb.connect();
 weatherDb.getAllData(data => observations = data);
+
+const port = process.env.PORT ? process.env.PORT : 3001;
+
 /*
  API:
  GET	/observations
@@ -61,5 +64,5 @@ connect().use(serveStatic(__dirname)).use('/observations', (req, res) => {
 		const errors = validateAndAddObservation(params[0], params[1]);
 		res.end(JSON.stringify(errors.length === 0 ? 'ok' : errors));
 	}
-}).listen(3001);
-console.log('Server running at http://localhost:3001/');
+}).listen(port);
+console.log('Server running at http://localhost:' + port);
