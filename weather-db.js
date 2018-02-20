@@ -34,6 +34,6 @@ module.exports = {
 var con = mysql.createConnection({
 	host: "cvktne7b4wbj4ks1.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
     user: "exopczqb76226s1s",
-    password: "process.env.PASSWORD"
+    password: process.env.PASSWORD
   });
   
