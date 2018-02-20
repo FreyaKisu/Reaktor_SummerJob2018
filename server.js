@@ -48,7 +48,7 @@ connect().use(serveStatic(__dirname)).use('/observations', (req, res) => {
 		const temperature = temp(obsSortByTime[0] ? obsSortByTime[0].temperature : undefined);
 		const dayAgoMillis = new Date().getTime() - 24 * 3600 * 1000;
 		const temperatures = obsSortByTime
-			.filter(o => o.time >= dayAgoMillis)
+			.filter(o => o.time.getTime() >= dayAgoMillis)
 			.map(o => o.temperature)
 			.sort((a, b) => a - b);
 		const min = temp(temperatures[0]);
