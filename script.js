@@ -71,11 +71,7 @@ const updateObservations = () => {
 			max: 'Max. temp. (&#8451;)'
 		};
 		const obsTable = [titleRow].concat(observations).map(obs => {
-<<<<<<< HEAD
 			const div = content => '<div>'+ (content ? content : '---')+'<div>';
-=======
-			const div = content =>(content ? content : '---');
->>>>>>> 1e9082114b530f797de9df253864474a63c2da7d
 			return div(['location', 'temperature', 'min', 'max'].map(prop => obs[prop]).map(div).join(''));
 		}).join('');
 
