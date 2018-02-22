@@ -7,9 +7,16 @@ $(document).ready(function(){
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
 
-    $('.container-with-bgimg').addClass(classToAdd);
-
+	$('.container-with-bgimg').addClass(classToAdd);
+	
+	var lat = "60.1699";
+	var lon = "24.9384";
+	var localTemp = getLocationForecast(lat, lon);
+	$('#localTemp').html(localTemp);
+	
+	
 });
+
 /*
 var geolocation = require('geolocation-360');
 var init = {
@@ -71,7 +78,7 @@ const updateObservations = () => {
 			max: 'Max. temp. (&#8451;)'
 		};
 		const obsTable = [titleRow].concat(observations).map(obs => {
-			const div = content => '<div class="cell">'+ (content ? content : '---')+'</div>';
+			const div = content => '<div>'+ (content ? content : '---')+'</div>';
 			return div(['location', 'temperature', 'min', 'max'].map(prop => obs[prop]).map(div).join(''));
 		}).join('');
 
