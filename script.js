@@ -50,8 +50,6 @@ function refreshPage(lat, lon) {
 	}
 });*/
 
-
-
 const makeRequest = (url, method, onReady) => {
 	const xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function () {
@@ -73,7 +71,7 @@ const updateObservations = () => {
 			max: 'Max. temp. (&#8451;)'
 		};
 		const obsTable = [titleRow].concat(observations).map(obs => {
-			const div = content => '<div>' + (content ? content : '---') + '</div>';
+			const div = content => '<div class="cell" >' + (content ? content : '---') + '</div>';
 			return div(['location', 'temperature', 'min', 'max'].map(prop => obs[prop]).map(div).join(''));
 		}).join('');
 

@@ -157,8 +157,10 @@ h3 {
 	color:rgb(225, 225, 247);
 	text-shadow: 1.5px 1.8px 2px  #302e2e;
 }
+
 #observations > div {
 	font-weight: bold;
+	min-width: 100%;
 }
 #observations > div ~ div {
 	font-weight: normal;
