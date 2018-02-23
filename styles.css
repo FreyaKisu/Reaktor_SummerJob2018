@@ -168,6 +168,7 @@ h3 {
 #observations > div > div {
 	display: inline-block;
 	width: 200px;
+	max-width: 20%;
 }
 #observations .cell{
 
