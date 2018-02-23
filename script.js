@@ -17,45 +17,6 @@ $(document).ready(function(){
 	
 });
 
-/*
-var geolocation = require('geolocation-360');
-var init = {
-    googleApiKey: 'google api key',
-    openCellIdApiKey: 'open cell id token',
-    mcc: '515', //supply for default value
-    mnc: '03', //supply for default value
-};
- 
-geolocation.initialize(init);
-
-
- var x = document.getElementById("demo");
-
-function getLocation() {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showPosition);
-	} else { 
-		x.innerHTML = "Geolocation is not supported by this browser.";
-	}
-}
-
-function showPosition(position) {
-	x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-	refreshPage(position.coords.latitude, position.coords.longitude);
-}
-
-function refreshPage(lat, lon) {
-	newUrl = 'https://myy.haaga-helia.fi/~a1703056/WeatherObservationApp/' + lat + '&lon=' + lon;
-	document.location.href = newUrl;
-}
-
-/*$(document).ready(function() {
-	if (window.location.href.contains("lat") > -1 && window.location.href.contains("lon") > -1) {
-
-	} else {
-		getLocation();
-	}
-});*/
 
 const makeRequest = (url, method, onReady) => {
 	const xhttp = new XMLHttpRequest();

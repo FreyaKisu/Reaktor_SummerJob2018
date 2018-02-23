@@ -16,53 +16,6 @@ const port = process.env.PORT ? process.env.PORT : 3001;
  POST	/observations/{location}/{temperature}
 	adds a temperature observation for a location
 */
-/*
-function check_city($lat, $lon) {
-
-	// Allowed places to use and store temperature values..
-	$places = array(
-		'Perttula'	=> array('lat' => '60.4198878', 'lon' =>  '24.6566230'),
-		'Tokio' 	=> array('lat' => '35.6584421', 'lon' => '139.7328635'),
-		'Helsinki' 	=> array('lat' => '60.1697530', 'lon' =>  '24.9490830'),
-		'New York' 	=> array('lat' => '40.7406905', 'lon' => '-73.9938438'),
-		'Amsterdam' 	=> array('lat' => '52.3650691', 'lon' =>   '4.9040238'),
-		'Dubai' 	=> array('lat' => '25.0925350', 'lon' =>  '55.1562243')
-	);
-
-	// Let's go array thru and check if user location coordinates are on same..
-	foreach($places as $row => $key) {
-		if ($lat == $key['lat'] && $lon == $key['lon']) {
-			$city = $row;
-//			break;
-		}
-	}
-
-	if (isset($city)) {
-		return $city;
-	} else {
-		return FALSE;
-	}
-}
-
-
-*/
-// This will fetch current temperature from openweathermap API according user coordinates
-function getLocationForecast(lat, lon) {
-
-	var apiKey = '6129ebfe553acbb2aa2d83cf9b5eafb8';
-	var kelvin = 0;
-	var celcius = 0;
-
-	var url="http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
-
-	$.getJSON(url, function(data) {
-		kelvin = parseFloat(data.temp);
-		celcius = parseFloat(kelvin - 273.15);
-	});
-
-	return celcius;
-}
-
 
 connect().use(serveStatic(__dirname)).use('/observations', (req, res) => {
 
@@ -104,7 +57,68 @@ connect().use(serveStatic(__dirname)).use('/observations', (req, res) => {
 		const max = temp(temperatures[temperatures.length - 1]);
 		return { location, temperature, min, max };
 	});
+/*
+	// This will fetch current temperature from openweathermap API according to the user's coordinates.
+
+	const getLocationForecast = (lat, lon) => {
+
+		var apiKey = '6129ebfe553acbb2aa2d83cf9b5eafb8';
+		var kelvin = 0;
+		var celcius = 0;
+
+		var url="http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
+
+		$.getJSON(url, function(data) {
+			kelvin = parseFloat(data.main.temp);
+			celcius = parseFloat(kelvin - 273.15);
+		});
+
+		return celcius;
+	};
+	// Verifying if the user is on the correct location to store the temperature.
+
+	function check_city(lat, lon) {
+
+	var city = '';
+
+	// We use only 4 decimals that this exercise match better for located area. :)
+
+	lat = Math.trunc(lat * 10000) / 10000;
+	lon = Math.trunc(lon * 10000) / 10000;
+
+	// Allowed places for storing temperature values.
+
+	var places = {
+			'Tokio':      { lat: '35.6584', lon: '139.7328' },
+			'Helsinki':   { lat: '60.1697', lon:  '24.9490' },
+			'New York':   { lat: '40.7406', lon: '-73.9938' },
+			'Amsterdam':  { lat: '52.3650', lon:   '4.9040' },
+			'Dubai':      { lat: '25.0925', lon:  '55.1562' }
+	};
+
+	// This will find the city where the user is located.
 	
+	Object.keys(places).forEach(key => {
+	if (places[key].lat == lat && places[key].lon == lon) {
+		city = key;
+		// There could be break..
+	}
+	});
+	  
+	// This will return located city or false if user is out of specific cities.
+	if (city != "") {
+			return city;
+	} else {
+			return 'FALSE';
+	}
+}
+ 
+// Test example
+lat = '40.74068888';
+lon = '-73.99389999';
+alert(check_city(lat, lon));
+*/
+
 	res.writeHead(200, { 'Content-Type': 'text/json' });
 	if (req.method === 'GET') {
 		res.end(JSON.stringify(calculateObservationsPerLocation()));
@@ -113,5 +127,6 @@ connect().use(serveStatic(__dirname)).use('/observations', (req, res) => {
 		const errors = validateAndAddObservation(params[0], params[1]);
 		res.end(JSON.stringify(errors.length === 0 ? 'ok' : errors));
 	}
+
 }).listen(port);
 console.log('Server running at http://localhost:' + port);

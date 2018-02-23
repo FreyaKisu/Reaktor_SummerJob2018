@@ -30,10 +30,30 @@ module.exports = {
             [[observation.location, observation.temperature, observation.time]]);
     }
 };
-
-var con = mysql.createConnection({
-	host: "cvktne7b4wbj4ks1.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
-    user: "exopczqb76226s1s",
-    password: process.env.PASSWORD
-  });
-  
+var con;
+if (process.env.PASSWORD) {
+    con = mysql.createConnection({
+        host: "cvktne7b4wbj4ks1.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
+        user: "exopczqb76226s1s",
+        password: process.env.PASSWORD
+    });
+} else {
+    // An in-memory 'database' for debugging
+    const data = [];
+ 
+    con = {
+        connect: () => {},
+        query: (q, v) => {
+            if (typeof v !== 'function') {
+                console.log('Persisting: ' + v);
+                data.push({
+                    location: v[0][0],
+                    temperature: v[0][1],
+                    time: v[0][2]
+                });
+            } else {
+                return v(undefined, data);
+            }
+        }
+    }
+}
