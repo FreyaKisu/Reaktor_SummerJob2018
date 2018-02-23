@@ -76,7 +76,7 @@ connect().use((req, res, fn) => {
         'server.js',
         'package.json'
     ];
-    if (serverFiles.some(f => req.url.indexOf(f) >= 0)) {
+    if (serverFiles.some(f => req.url.toLowerCase().indexOf(f) >= 0)) {
         res.writeHead(404);
         res.end();
         return;
