@@ -11,21 +11,21 @@ there must be database "weather" with the following table:
 +-------------+-------------+------+-----+---------+-------+
 */
 module.exports = {
-    getAllData: function(afterLoad) {
+    getAllData: function (afterLoad) {
         // Query initial data from the database
         con.query('select location, temperature, time from ta2tfzaazgdur2p4.observations;',
-        function (err, result) {
-            if (err) throw err;
-            afterLoad(result);
-        });
+            function (err, result) {
+                if (err) throw err;
+                afterLoad(result);
+            });
     },
-    connect: function() {
-        con.connect(function(err) {
+    connect: function () {
+        con.connect(function (err) {
             if (err) throw err;
             console.log("Connected!");
         });
     },
-    saveObservation: function(observation) {
+    saveObservation: function (observation) {
         con.query('insert into ta2tfzaazgdur2p4.observations (location, temperature, time) values (?)',
             [[observation.location, observation.temperature, observation.time]]);
     }
@@ -40,9 +40,9 @@ if (process.env.PASSWORD) {
 } else {
     // An in-memory 'database' for debugging
     const data = [];
- 
+
     con = {
-        connect: () => {},
+        connect: () => { },
         query: (q, v) => {
             if (typeof v !== 'function') {
                 console.log('Persisting: ' + v);
