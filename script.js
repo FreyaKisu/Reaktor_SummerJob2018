@@ -19,7 +19,7 @@ $(document).ready(function(){
                 console.log("Server answered with data: ", data);
                 if (!data.error) {
                     $('#city').val(data.location).change();
-                    $('#localTemp').html('Current temperature in '+ data.location + ' is: ' + data.temperature + '&#8451;');
+                    $('#localTemp').html('Current temperature <br/> in '+ data.location + ' is ' + data.temperature + '&#8451;');
                     $('#temperature').val(data.temperature);
                 }
             });

@@ -119,13 +119,6 @@ body {
 	color:rgb(225, 225, 247);
 	text-shadow:1px 1px 2px rgb(102, 102, 102), 0 0 1em rgb(56, 56, 58), 0 0 0.2em#302e2e;
 }
-#content {
-	text-align: left;
-	color:rgb(225, 225, 247);
-    text-shadow: 1.5px 1.8px 2px  #302e2e;
-	display: inline-block;
-	padding:30px 0px 30px 0px;
-}
 #selectors {
 	font-size: 20px;
 	letter-spacing: 2.5px;
@@ -168,12 +161,13 @@ input {
 	width: 200px;
 }
 #localTemp{
-	font-size: 1.2em;
+	font-size: 1.5em;
 	color:rgb(225, 225, 247);
-    text-shadow: 1.5px 1.8px 2px  #161616;
+    text-shadow:  1.5px 1.8px 2px  #302e2e;
 	display: inline-block;
 	padding-bottom: 25px;
 	text-align:center;
+	padding:30px 0px 30px 0px;
 }
 #selectors > select {
 	width: 200px;
