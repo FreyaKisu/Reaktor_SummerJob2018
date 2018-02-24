@@ -2,6 +2,7 @@ var serveStatic = require('serve-static');
 var connect = require('connect');
 const http = require('http');
 const weatherDb = require('./weather-db');
+var toFixed = require('tofixed');
  
 let observations = [];
 weatherDb.connect();
@@ -36,12 +37,12 @@ function getLocationForecast(lat, lon, onReady) {
     }
  
     var url="http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
- 
+
     requestUrl(url, function(data) {
         console.log(data);
         kelvin = parseFloat(data.main.temp);
         celcius = parseFloat(kelvin - 273.15);
-        onReady(place.city, celcius);
+        onReady(place.city, toFixed(celcius, 0));
     });
 }
  

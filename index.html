@@ -23,7 +23,6 @@
 </head>
 
 <body>
-	<div class="ontainer-fluid">
 		<div class="container-with-bgimg">
 			<div id="page-header">
 				<h1 class="container-text-center">Local weather observations</h1>
@@ -36,12 +35,16 @@
 							<h3>Select city and add</h3>
 								<h3>  your observation:</h3>
 						</div>
+						<div class="row">
+								<div class="col-sm-12">
+						<div id="localTemp"></div>
+						       </div>
+					    </div>
 				<div id="selectors">
 					<div>Select city</div>
 						<select id="city"></select>
 							<div>Temperature (&#8451;):</div>
 								<input id="temperature" value="" placeholder="-16" />
-								 <div id="localTemp"></div>
 					<div class="cl-sm-4">
 						<button type="button" class="btn bt-default" onclick="submitData()"> Submit
 							<span class="glyphicon glyphicon-thumbs-up"></span>

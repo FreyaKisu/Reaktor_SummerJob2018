@@ -44,9 +44,9 @@ const updateObservations = () => {
     makeRequest('/observations', 'GET', observations => {
         const titleRow = {
             location: 'City',
-            temperature: 'Temperature. (&#8451;)',
-            min: 'Min. temp. (&#8451;)',
-            max: 'Max. temp. (&#8451;)'
+            temperature: '&#8451;',
+            min: 'Min.&#8451;',
+            max: 'Max.&#8451;'
         };
         const obsTable = [titleRow].concat(observations).map(obs => {
             const div = content => '<div>'+ (content ? content : '---')+'</div>';

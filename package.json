@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "connect": "3.6.5",
-    "serve-static": "1.13.1",
+    "jquery": "3.3.1",
     "mysql": "2.15.0",
-    "jquery":"3.3.1"
+    "serve-static": "1.13.1",
+    "tofixed": "^1.0.0"
   }
 }
