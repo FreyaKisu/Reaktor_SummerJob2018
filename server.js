@@ -71,6 +71,9 @@ const fileServer = serveStatic(__dirname);
  POST   /location/{latitude}/{longitude}
     returns temperature if your current location is near a supported location
 */
+
+// Preventing the visibility of backend files.
+
 connect().use((req, res, fn) => {
     const serverFiles = [
         'weather-db.js',
@@ -87,6 +90,8 @@ connect().use((req, res, fn) => {
     const temperatureSanityCheck = temperature =>
         !isNaN(temperature) && temperature > -70 && temperature < 65;
  
+		// Adding the temperature and validating if it is a real value. 
+
     const validateAndAddObservation = (location, temperatureStr) => {
         const temperature = Number(temperatureStr);
         const errors = [
@@ -105,11 +110,13 @@ connect().use((req, res, fn) => {
         return errors;
     };
    
+	// Checks the selected location and adds the temperature accordingly.
+	
     const calculateObservationsPerLocation = () => locations.map(location => {
         const obsSortByTime = observations
             .filter(obs => obs.location === location.city)
             .sort((a, b) => b.time.getTime() - a.time.getTime());
-        const temp = value => value !== undefined ? value.toFixed(2) : undefined;
+        const temp = value => value !== undefined ? value.toFixed(0) : undefined;
         const temperature = temp(obsSortByTime[0] ? obsSortByTime[0].temperature : undefined);
         const dayAgoMillis = new Date().getTime() - 24 * 3600 * 1000;
         const temperatures = obsSortByTime

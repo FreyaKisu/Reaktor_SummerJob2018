@@ -27,7 +27,7 @@ $(document).ready(function(){
     }
    
 });
- 
+ //http request
 const makeRequest = (url, method, onReady) => {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -40,6 +40,8 @@ const makeRequest = (url, method, onReady) => {
     xhttp.send();
 };
  
+//Updating the table according to the subbmitted data.
+
 const updateObservations = () => {
     makeRequest('/observations', 'GET', observations => {
         const titleRow = {
@@ -65,6 +67,8 @@ const updateObservations = () => {
     });
 };
  
+// Subbmitting and posting the observation to the table. 
+
 const submitData = () => {
     const city = document.getElementById('city').value;
     const temp = document.getElementById('temperature').value;
