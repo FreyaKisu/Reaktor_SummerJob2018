@@ -107,7 +107,9 @@ connect().use((req, res, fn) => {
 		return errors;
 	};
 
-	// Checks the selected location and adds the temperature accordingly.
+	/* This function combines the saved data into the format in which the UI will use it.
+	 Calculates the min and max temperature in the last 24 hours and gets the most recent temperature for all locations. 
+	 */
 
 	const calculateObservationsPerLocation = () => locations.map(location => {
 		const obsSortByTime = observations

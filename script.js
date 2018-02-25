@@ -9,7 +9,9 @@ $(document).ready(function () {
 
     $('.container-with-bgimg').addClass(classToAdd);
 
-    //Geolocation
+   /* Requests access to geolocation. If access is granted, sends the location to backend.
+    If the location is near a supported city, it returns the actual current temperature near that city.
+   */
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -27,6 +29,7 @@ $(document).ready(function () {
     }
 
 });
+
 //http request
 const makeRequest = (url, method, onReady) => {
     const xhttp = new XMLHttpRequest();
@@ -40,7 +43,7 @@ const makeRequest = (url, method, onReady) => {
     xhttp.send();
 };
 
-//Updating the table according to the subbmitted data.
+// Updating the table with data fetched from backend (any user may have submitted that data).
 
 const updateObservations = () => {
     makeRequest('/observations', 'GET', observations => {
